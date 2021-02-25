@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div id="heading">
-      <h1>Brew Dog Beers</h1>
+      <h1><img src="http://assets.stickpng.com/images/585e65d4cb11b227491c3409.png" height="100" width="100" alt="title">Brew Dog Beer</h1>
     </div>
 
     <div>
@@ -9,7 +9,9 @@
       <beer-detail :beer="selectedBeer"></beer-detail>
     </div>
 
-    <button class="button" v-if="!favouriteBeer.includes(selectedBeer)" v-on:click="addToFavourite">Add Beer</button>
+    <button class="button" v-if="!favouriteBeer.includes(selectedBeer)" v-on:click="addToFavourite">
+      <img src="https://www.brewdog.com/media/catalog/product/cache/eb360c13587b21a8ac6c611a2762b864/p/u/punk_ipa.png" alt="bottle" width="100" height="120">
+    </button>
     <favourite-beer :favouriteBeer="favouriteBeer"></favourite-beer>
   </div>
 </template>
@@ -56,25 +58,30 @@ export default {
 </script>
 
 <style>
+body{
+  margin-top: 0;
+  margin: 0;
+}
 
 #app{
-  /* background-image:url(//images.ctfassets.net/b0qgo9rl751g/6ktiAGkYidq6y18ed6mEy7/7368b3d49887c5aa6f6eb585c296917e/hp_febrewery_mob.jpg);
-  background-image: no-repeat;
-  background-color: rgba(0, 0, 0, var(--bg-opacity));
-  padding-top: 48px;
-  padding-bottom: 48px;
-  padding-left: 24px;
-  padding-right: 24px;
+  margin: 0;
+  background-image: url(https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/11/24/10/brew-dog.jpg);
+  height: 100%;
+  width: 100%;
   --text-opacity: 1;
   color: #fff;
-  color: rgba(255, 255, 255, var(--text-opacity)); */
 }
 #heading{
+
   text-align: center;
 }
 
 #option-bar{
   margin: 0 auto;
+}
 
+.button{
+  border: none;
+  position: center;
 }
 </style>

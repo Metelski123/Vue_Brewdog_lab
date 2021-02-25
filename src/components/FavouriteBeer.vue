@@ -2,7 +2,7 @@
   <div id="favourite">
     <h2>Favourite Beers</h2>
       <p v-for="(favouriteBeer, index) in favouriteBeer" :key="index">{{favouriteBeer.name}} <img class="small" :src="favouriteBeer.image_url"></p>
-      <button v-on:click="removeBeer">Remove From Favourites</button>
+      <button v-on:click="removeBeer">Aye, no thanks pal!</button>
   </div>
 </template>
 
@@ -22,9 +22,9 @@ export default {
 
 <style lang="css" scoped>
 
-.favourite{
-  padding: 30px;
-  text-align: center;
+  #favourite{
+    padding: 30px;
+    text-align: center;
 }
 
 .small{

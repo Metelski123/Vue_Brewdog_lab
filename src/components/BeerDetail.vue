@@ -3,10 +3,10 @@
     <div v-if="!beer">
       <p>Please Select a Beer</p>
     </div>
-    <div v-if="beer" id="beers">
-      <h3 class="beers">name: {{beer.name}}</h3>
-      <p class="beer-list"> abv: {{beer.abv}}</p>
-      <p class="beer-list"> description: {{beer.description}}</p>
+    <div v-if="beer" class="beers">
+      <h3>Name: {{beer.name}}</h3>
+      <p> Abv: {{beer.abv}}</p>
+      <p> Description: {{beer.description}}</p>
       <img class="image" v-bind:src="beer.image_url">
     </div>
   </div>
@@ -21,16 +21,13 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .image{
  height: 200px
 }
-.beers{
- text-align: center;
-}
 
-.beer-list{
-  display: flex;
-  flex-flow: row wrap;
+.beers{
+  margin: 0 auto;
+  width:40%;
 }
 </style>
